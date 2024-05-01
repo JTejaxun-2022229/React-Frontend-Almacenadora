@@ -49,9 +49,9 @@ export const getTaskCompletada = async () => {
     }
 }
 
-export const getTaskTerminada = async () => {
+export const getTaskIncompleta = async () => {
     try{
-        return await apiClient.get('?estado=terminada')
+        return await apiClient.get('?estado=incompleta')
     }catch(e){
         return{
             error: true,
