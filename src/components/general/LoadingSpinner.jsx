@@ -1,6 +1,6 @@
 export const LoadingSpinner = () => {
     return(
-        <div class="loading" > 
+        <div className="loading" > 
             Loading&#8330;
         </div>
     )
