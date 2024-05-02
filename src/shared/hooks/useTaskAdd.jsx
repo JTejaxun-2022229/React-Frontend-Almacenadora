@@ -12,7 +12,7 @@ export const useTaskAdd = () => {
 
         setIsLoading(true);
 
-        const response = await taskRquest ({
+        const response = await postTaskRequest ({
             nombre,
             descripcion,
             fechaInicio,

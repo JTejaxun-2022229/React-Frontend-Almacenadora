@@ -1,3 +1,5 @@
+
+
 export const Input = ({
     field,
     label,
@@ -7,42 +9,41 @@ export const Input = ({
     showErrorMessage,
     validationMessage,
     onBlurHandler,
-    textarea
+    textarea,
 }) => {
     const handleValueChange = (event) => {
-        onChangeHandler(event.targe.value, field) 
+        onChangeHandler(event.target.value, field)
     }
 
-    const handleInputOnBlur = (event) => {
+    const handleInputBlur = (event) => {
         onBlurHandler(event.target.value, field)
     }
 
-    return(
-        <>
-            <div>
-                <span>{label}</span>
-            </div>
-            {textarea ? (
-                <textarea
-                    type={type}
-                    value={value}
-                    onChange={handleValueChange}
-                    onBlur={handleInputOnBlur}
-                    rows={5}
-                    style={{maxWidth: '400px'}}
-                />
-            ) : (
-                <input
-                    type={type}
-                    value={value}
-                    onChange={handleValueChange}
-                    onBlur={handleInputOnBlur}
-                />
-            )}
-            <span>
-                {showErrorMessage && validationMessage}
-            </span>
-
-        </>
-    )
+  return (
+    <>
+        <div className="">
+            <span>{label}</span>
+        </div>
+        {textarea ? (
+            <textarea
+                type={type}
+                value={value}
+                onChange={handleValueChange}
+                onBlur={handleInputBlur}
+                rows={5}
+                style={{maxWidth: '400px'}}
+            />
+        ) : (
+            <input
+                type={type}
+                value={value}
+                onChange={handleValueChange}
+                onBlur={handleInputBlur}
+            />
+        )}
+        <span className="">
+            {showErrorMessage && validationMessage}
+        </span>
+    </>
+  )
 }
