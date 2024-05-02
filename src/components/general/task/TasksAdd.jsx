@@ -33,13 +33,8 @@ export const TasksAdd = ({ switchTaskHandler }) => {
             value: "",
             isValid: false,
             showError: false,
-        },
-        estado: {
-            value: "",
-            isValid: false,
-            showError: false,
         }
-
+       
     })
 
 
@@ -79,7 +74,6 @@ export const TasksAdd = ({ switchTaskHandler }) => {
             case "nombre":
             case "descripcion":
             case "nombreResponsable":
-            case "estado":
                 isValid = value.trim() !== "";
                 break;
             case "fechaInicio":
@@ -111,14 +105,13 @@ export const TasksAdd = ({ switchTaskHandler }) => {
 
     const handleTask = (event) => {
         event.preventDefault();
-        console.log(formState)
+        
         task(
             formState.nombre.value,
             formState.descripcion.value,
             formState.fechaInicio.value,
             formState.fechaCierre.value,
-            formState.nombreResponsable.value,
-            formState.estado.value
+            formState.nombreResponsable.value
         );
     };
 
@@ -127,9 +120,7 @@ export const TasksAdd = ({ switchTaskHandler }) => {
         !formState.descripcion.isValid ||
         !formState.fechaInicio.isValid ||
         !formState.fechaCierre.isValid ||
-        !formState.nombreResponsable.isValid ||
-        !formState.estado.isValid;
-
+        !formState.nombreResponsable.isValid;
 
     return (
         <div>
@@ -151,12 +142,14 @@ export const TasksAdd = ({ switchTaskHandler }) => {
                     type="text"
                     onBlurHandler={handleInputValidationOnBlur}
                 />
+                <label>Fecha de Inicio</label>
                 <DatePickerComponent
                     selected={formState.fechaInicio.value}
                     onChange={handleStartDateChange}
                     onBlurHandler={handleInputValidationOnBlur}
 
                 />
+                <label>Fecha de Finalizacion</label>
                 <DatePickerComponent
                     selected={formState.fechaCierre.value}
                     onChange={handleEndDateChange}
@@ -171,15 +164,6 @@ export const TasksAdd = ({ switchTaskHandler }) => {
                     type="text"
                     onBlurHandler={handleInputValidationOnBlur}
                 />
-                <Input
-                    field="estado"
-                    label="estado"
-                    value={formState.estado.value}
-                    onChangeHandler={handleInputValueChange}
-                    type="text"
-                    onBlurHandler={handleInputValidationOnBlur}
-                />
-
                 <button onClick={handleTask} disabled={isSubmitButtonDisabled}  >
                     Add
                 </button>
