@@ -8,7 +8,7 @@ export const useTaskAdd = () => {
 
     const navigate = useNavigate();
 
-    const task = async( nombre, descripcion, fechaInicio, fechaCierre, nombreResponsable, estado) => {
+    const task = async( nombre, descripcion, fechaInicio, fechaCierre, nombreResponsable) => {
 
         setIsLoading(true);
 
@@ -18,7 +18,6 @@ export const useTaskAdd = () => {
             fechaInicio,
             fechaCierre,
             nombreResponsable,
-            estado
         });
 
         setIsLoading(false);
