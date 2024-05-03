@@ -1,7 +1,7 @@
 import { Route, Routes } from 'react-router-dom';
 import Task from '../tasks/Tasks';
 
-const Content = () => {
+export const Content = () => {
 
     return (
         <div className="content-container">
@@ -11,5 +11,3 @@ const Content = () => {
         </div>
     );
 };
-
-export default Content;
