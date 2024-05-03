@@ -1,7 +1,7 @@
 import { TaskCard } from './TaskCard';
 import { useNavigate } from 'react-router-dom';
 
-export const Task = ({ tasks }) => {
+export const Tasks = ({ tasks }) => {
 
     const navigate = useNavigate();
 

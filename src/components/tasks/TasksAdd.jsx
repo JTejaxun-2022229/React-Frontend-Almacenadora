@@ -1,8 +1,9 @@
 import { useState } from "react";
 import { Input } from "../general/Input";
-import { DatePickerComponent } from "../general/DatePicker";
+import { DatePicker } from "../general/DatePicker";
 
 import { useTaskAdd } from "../../shared/hooks/useTaskAdd";
+import ReactDatePicker from "react-datepicker";
 
 export const TasksAdd = ({ switchTaskHandler }) => {
     const { task, isLoading } = useTaskAdd();
@@ -143,14 +144,14 @@ export const TasksAdd = ({ switchTaskHandler }) => {
                     onBlurHandler={handleInputValidationOnBlur}
                 />
                 <label>Fecha de Inicio</label>
-                <DatePickerComponent
+                <ReactDatePicker
                     selected={formState.fechaInicio.value}
                     onChange={handleStartDateChange}
                     onBlurHandler={handleInputValidationOnBlur}
 
                 />
                 <label>Fecha de Finalizacion</label>
-                <DatePickerComponent
+                <DatePicker
                     selected={formState.fechaCierre.value}
                     onChange={handleEndDateChange}
                     onBlurHandler={handleInputValidationOnBlur}

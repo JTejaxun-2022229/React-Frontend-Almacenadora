@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { Input } from "../general/Input";
-import { DatePickerComponent } from "../general/DatePicker";
+import { DatePicker } from "../general/DatePicker";
 
 const inputs = [
     {

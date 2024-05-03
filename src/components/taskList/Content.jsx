@@ -1,12 +1,12 @@
 import { Route, Routes } from 'react-router-dom';
-import Task from '../tasks/Tasks';
+import { Tasks } from '../tasks/Tasks';
 
 export const Content = () => {
 
     return (
         <div className="content-container">
             <Routes>
-                <Route path="/task" element={<Task />} />
+                <Route path="/" element={<Tasks />} />
             </Routes>
         </div>
     );

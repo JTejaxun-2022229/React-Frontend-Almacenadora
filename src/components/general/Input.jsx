@@ -10,7 +10,7 @@ export const Input = ({
     textarea
 }) => {
     const handleValueChange = (event) => {
-        onChangeHandler(event.targe.value, field)
+        onChangeHandler(event.target.value, field)
     }
 
     const handleInputOnBlur = (event) => {
