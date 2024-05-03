@@ -24,6 +24,12 @@ const inputs = [
         type: "text",
     },
     {
+        field: "status",
+        label: "Estado",
+        type: "multiSelect",
+        options: ['pendiente', 'terminada', 'cancelada'],
+    },
+    {
         field: "fechaInicio",
         label: "Fecha de Inicio",
         type: "datePicker",
@@ -67,6 +73,7 @@ export const TasksSettings = ({ settingTask, saveTask }) => {
             value: settingTask.status || [], 
             isValid: true, 
             showError: false,
+            
         }
     });
 
