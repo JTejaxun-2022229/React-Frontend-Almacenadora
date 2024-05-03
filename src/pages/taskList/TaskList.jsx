@@ -1,8 +1,8 @@
 import React, { useEffect } from 'react';
-import { Header } from '../components/header/Header';
-import { LoadingSpinner } from '../components/general/LoadingSpinner';
-import { Content } from '../components/taskList/Content';
-import { useTask, } from '../shared/hooks';
+import { Header } from '../../components/header/Header';
+import { LoadingSpinner } from '../../components/general/LoadingSpinner';
+import { Content } from '../../components/taskList/Content';
+import { useTask, } from '../../shared/hooks/useTask';
 import './taskList.css';
 
 export const TaskList = () => {

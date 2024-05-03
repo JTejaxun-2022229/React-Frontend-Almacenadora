@@ -1,5 +1,5 @@
 import { Route, Routes } from 'react-router-dom';
-import Task from '../tasks/Task';
+import Task from '../tasks/Tasks';
 
 const Content = () => {
 
