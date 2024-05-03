@@ -1,3 +1,5 @@
+import './taskCard.css'
+
 export const TaskCard = ({
     nombre,
     id,
